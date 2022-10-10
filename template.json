@@ -28,7 +28,7 @@
           "base": 10
         },
         "bdy": {
-          "label": "strength",
+          "label": "body",
           "value": 10,
           "max": 10,
           "cost": 2,

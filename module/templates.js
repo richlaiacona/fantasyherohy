@@ -8,8 +8,8 @@ export const preloadHandlebarsTemplates = async function() {
   // Define template paths to load
   const templatePaths = [
     // Attribute list partial.
-    "systems/fantasyhero/templates/parts/sheet-attributes.html",
-    "systems/fantasyhero/templates/parts/sheet-groups.html"
+    "systems/fantasyherohy/templates/parts/sheet-attributes.html",
+    "systems/fantasyherohy/templates/parts/sheet-groups.html"
   ];
 
   // Load the template parts

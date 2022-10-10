@@ -8,40 +8,30 @@
                 <input name="name" type="text" value="{{data.name}}" placeholder="Name" />
             </h1>
             <div class="resource">BODY
-                <input type="number" name="system.stats.bdy.value" value="{{systemData.stats.bdy.value}}"/>
+                <input type="number" name="system.attributes.bdy.value" value="{{systemData.attributes.bdy.value}}"/>
                 <span> / </span>
-                <input type="number" name="system.stats.bdy.max" value="{{systemData.stats.bdy.max}}"/>
+                <input type="number" name="system.attributes.bdy.max" value="{{systemData.attributes.bdy.max}}"/>
             </div>
-            <div class="resource">STUN
-                <input type="number" name="system.stats.stn.value" value="{{systemData.stats.stn.value}}"/>
+            <div class="resource">
+                <input type="number" name="system.power.value" value="{{systemData.power.value}}"/>
                 <span> / </span>
-                <input type="number" name="system.stats.stn.max" value="{{systemData.stats.stn.max}}"/>
-            </div>
-            <div class="resource">END
-                <input type="number" name="system.stats.end.value" value="{{systemData.stats.end.value}}"/>
-                <span> / </span>
-                <input type="number" name="system.stats.end.max" value="{{systemData.stats.end.max}}"/>
+                <input type="number" name="system.power.max" value="{{systemData.power.max}}"/>
             </div>
         </div>
     </header>
-    
+
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary">
-        <a class="item" data-tab="stats">Stats</a>
+        <a class="item" data-tab="attributes">Attributes</a>
         <a class="item" data-tab="skills">Skills</a>
-        <a class="item" data-tab="spells">Spells</a>
         <a class="item" data-tab="items">Items</a>
-        <a class="item" data-tab="combat">Combat</a>
-        <a class="item" data-tab="description">Info</a>
+        <a class="item" data-tab="spells">Spells</a>
+        <a class="item" data-tab="description">Description</a>
     </nav>
-    
+
     {{!-- Sheet Body --}}
     <section class="sheet-body">
-        {{!-- Attributes Tab --}}
-        <div class="tab attributes" data-group="primary" data-tab="attributes">
-          
-        </div>
-        
+
         {{!-- Biography Tab --}}
         <div class="tab description" data-group="primary" data-tab="description">
             {{editor biographyHTML target="system.biography" button=true editable=editable engine="prosemirror"}}
@@ -100,5 +90,14 @@
             </p>
         </div>
 
+        {{!-- Attributes Tab --}}
+        <div class="tab attributes" data-group="primary" data-tab="attributes">
+             
+
+            {{!-- Render the attribute list partial. --}}
+            {{> "systems/fantasyherohy/templates/parts/sheet-attributes.html" attributes=systemData.ungroupedAttributes dtypes=dtypes}}
+
+            
+        </div>
     </section>
 </form>

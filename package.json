@@ -14,8 +14,18 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "gulp": "^4.0.2",
     "gulp-less": "^4.0.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  },
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richlaiacona/fantasyherohy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/richlaiacona/fantasyherohy/issues"
+  },
+  "homepage": "https://github.com/richlaiacona/fantasyherohy#readme"
 }

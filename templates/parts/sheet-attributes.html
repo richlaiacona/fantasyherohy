@@ -1,13 +1,28 @@
-<ol class="attributes-list">
-    {{#each actor.data.attributes as |attrib key|}}
-    <li class="attribute flexrow" data-attribute="{{key}}">
-        <span class="attribute-label flexrow" name="data.attributes.{{key}}.label">{{label}}</span>
-        <div class="attribute-editbox flexrow">
-            <input class="attribute-value" type="text" name="data.attributes.{{key}}.value" value="{{attrib.value}}" data-dtype="Number"/>
-        </div>
-        <span class="attribute-label flexrow" name="data.attributes.{{key}}.label">{{max}}</span>
-        <span class="attribute-label flexrow" name="data.attributes.{{key}}.label">{{cost}}</span>
-        <span class="attribute-label flexrow" name="data.attributes.{{key}}.label">{{base}}</span>
-    </li>
-    {{/each}}
-</ol>
+<section class="attributes-group">
+    <div>
+        <table class="attributes-table">
+            <tr class="attribute">
+                <td  class="attribute-label" >STAT</td>
+                <td  class="attribute-label" >VAL</td>
+                <td  class="attribute-label" >MAX</td>
+                <td  class="attribute-label" >COST</td>
+                <td  class="attribute-label" >BASE</td>
+            </tr>
+
+            {{#each systemData.attributes as |attrib key|}}
+
+            <tr class="attribute" data-attribute="{{key}}">
+                <td class="attribute-label" name="data.attributes.{{key}}.label">{{label}}</td>
+                <td class="attribute-editbox">
+                    <input class="attribute-value" type="text" name="data.attributes.{{key}}.value" value="{{attrib.value}}" data-dtype="Number"/>
+                </td>
+                <td class="attribute-label" name="data.attributes.{{key}}.label">{{max}}</td>
+                <td class="attribute-label" name="data.attributes.{{key}}.label">{{cost}}</td>
+                <td class="attribute-label" name="data.attributes.{{key}}.label">{{base}}</td>
+            </tr>
+
+            {{/each}}
+
+        </table>
+    </div>
+</section>
