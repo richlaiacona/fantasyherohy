@@ -1,0 +1,123 @@
+{
+"Actor": {
+  "types": ["character"],
+  "character": {
+    "biography": "",
+   
+    "attributes": {
+      "str":{
+        "label":"strength",
+        "value":10,
+        "max":10,
+        "cost":1,
+        "base":10
+      },
+      "dex":{
+        "label":"dexterity",
+        "value":10,
+        "max":10,
+        "cost":3,
+        "base":10
+      },
+      "con":{
+        "label":"body",
+        "value":10,
+        "max":10,
+        "cost":2,
+        "base":10
+      },
+      "bdy":{
+        "label":"strength",
+        "value":10,
+        "max":10,
+        "cost":2,
+        "base":10
+      },
+      "int":{
+        "label":"intelligence",
+        "value":10,
+        "max":10,
+        "cost":1,
+        "base":10
+      },
+      "ego":{
+        "label":"ego",
+        "value":10,
+        "max":10,
+        "cost":2,
+        "base":10
+      },
+      "pre":{
+        "label":"presense",
+        "value":10,
+        "max":10,
+        "cost":0.5,
+        "base":10
+      },
+      "com":{
+        "label":"comliness",
+        "value":10,
+        "max":10,
+        "cost":0.5,
+        "base":10
+      },
+      "pd":{
+        "label":"physical defence",
+        "value":10,
+        "max":10,
+        "cost":1,
+        "base":2
+      },
+      "ed":{
+        "label":"energy defence",
+        "value":10,
+        "max":10,
+        "cost":1,
+        "base":2
+      },
+      "spd":{
+        "label":"speed",
+        "value":2,
+        "max":2,
+        "cost":10,
+        "base":2
+      },
+      "rec":{
+        "label":"recovery",
+        "value":4,
+        "max":4,
+        "cost":2,
+        "base":4
+        },
+      "end":{
+        "label":"endurance",
+        "value":20,
+        "max":20,
+        "cost":0.5,
+        "base":20
+      },
+      "stn":{
+        "label":"stun",
+        "value":20,
+        "max":20,
+        "cost":1,
+        "base":20
+        }
+      }
+    },
+    "skills": {},
+    "spells":{},
+    "items":{}
+  
+},
+"Item": {
+  "types": ["item"],
+  "item": {
+    "description": "",
+    "quantity": 1,
+    "weight": 0,
+    "attributes": {},
+    "groups": {}
+  }
+}
+}
