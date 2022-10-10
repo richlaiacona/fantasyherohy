@@ -1,123 +1,431 @@
 {
-"Actor": {
-  "types": ["character"],
-  "character": {
-    "biography": "",
-   
-    "attributes": {
-      "str":{
-        "label":"strength",
-        "value":10,
-        "max":10,
-        "cost":1,
-        "base":10
-      },
-      "dex":{
-        "label":"dexterity",
-        "value":10,
-        "max":10,
-        "cost":3,
-        "base":10
-      },
-      "con":{
-        "label":"body",
-        "value":10,
-        "max":10,
-        "cost":2,
-        "base":10
-      },
-      "bdy":{
-        "label":"strength",
-        "value":10,
-        "max":10,
-        "cost":2,
-        "base":10
-      },
-      "int":{
-        "label":"intelligence",
-        "value":10,
-        "max":10,
-        "cost":1,
-        "base":10
-      },
-      "ego":{
-        "label":"ego",
-        "value":10,
-        "max":10,
-        "cost":2,
-        "base":10
-      },
-      "pre":{
-        "label":"presense",
-        "value":10,
-        "max":10,
-        "cost":0.5,
-        "base":10
-      },
-      "com":{
-        "label":"comliness",
-        "value":10,
-        "max":10,
-        "cost":0.5,
-        "base":10
-      },
-      "pd":{
-        "label":"physical defence",
-        "value":10,
-        "max":10,
-        "cost":1,
-        "base":2
-      },
-      "ed":{
-        "label":"energy defence",
-        "value":10,
-        "max":10,
-        "cost":1,
-        "base":2
-      },
-      "spd":{
-        "label":"speed",
-        "value":2,
-        "max":2,
-        "cost":10,
-        "base":2
-      },
-      "rec":{
-        "label":"recovery",
-        "value":4,
-        "max":4,
-        "cost":2,
-        "base":4
+  "Actor": {
+    "types": [
+      "character"
+    ],
+    "character": {
+      "biography": "",
+      "attributes": {
+        "str": {
+          "label": "strength",
+          "value": 10,
+          "max": 10,
+          "cost": 1,
+          "base": 10
         },
-      "end":{
-        "label":"endurance",
-        "value":20,
-        "max":20,
-        "cost":0.5,
-        "base":20
-      },
-      "stn":{
-        "label":"stun",
-        "value":20,
-        "max":20,
-        "cost":1,
-        "base":20
+        "dex": {
+          "label": "dexterity",
+          "value": 10,
+          "max": 10,
+          "cost": 3,
+          "base": 10
+        },
+        "con": {
+          "label": "body",
+          "value": 10,
+          "max": 10,
+          "cost": 2,
+          "base": 10
+        },
+        "bdy": {
+          "label": "strength",
+          "value": 10,
+          "max": 10,
+          "cost": 2,
+          "base": 10
+        },
+        "int": {
+          "label": "intelligence",
+          "value": 10,
+          "max": 10,
+          "cost": 1,
+          "base": 10
+        },
+        "ego": {
+          "label": "ego",
+          "value": 10,
+          "max": 10,
+          "cost": 2,
+          "base": 10
+        },
+        "pre": {
+          "label": "presense",
+          "value": 10,
+          "max": 10,
+          "cost": 1,
+          "base": 10
+        },
+        "com": {
+          "label": "comliness",
+          "value": 10,
+          "max": 10,
+          "cost": 0.5,
+          "base": 10
+        },
+        "pd": {
+          "label": "physical defence",
+          "value": 10,
+          "max": 10,
+          "cost": 1,
+          "base": 2
+        },
+        "ed": {
+          "label": "energy defence",
+          "value": 10,
+          "max": 10,
+          "cost": 1,
+          "base": 2
+        },
+        "spd": {
+          "label": "speed",
+          "value": 2,
+          "max": 2,
+          "cost": 10,
+          "base": 2
+        },
+        "rec": {
+          "label": "recovery",
+          "value": 4,
+          "max": 4,
+          "cost": 2,
+          "base": 4
+        },
+        "end": {
+          "label": "endurance",
+          "value": 20,
+          "max": 20,
+          "cost": 0.5,
+          "base": 20
+        },
+        "stn": {
+          "label": "stun",
+          "value": 20,
+          "max": 20,
+          "cost": 1,
+          "base": 20
         }
       }
     },
-    "skills": {},
-    "spells":{},
-    "items":{}
-  
-},
-"Item": {
-  "types": ["item"],
-  "item": {
-    "description": "",
-    "quantity": 1,
-    "weight": 0,
-    "attributes": {},
-    "groups": {}
+    "skills": {
+      "Acrobatics": {
+        "label": "Acrobatics",
+        "stat": "dex",
+        "cost": "3/2"
+      },
+      "Acting": {
+        "label": "Acting",
+        "stat": "pre",
+        "cost": "3/2"
+      },
+      "Analyze": {
+        "label": "Analyze",
+        "stat": "int",
+        "cost": "3/2"
+      },
+      "Animal Handler": {
+        "label": "Animal Handler",
+        "stat": "pre",
+        "cost": "3/2"
+      },
+      "Area Knowledge": {
+        "label": "Area Knowledge",
+        "stat": "v",
+        "cost": "2/1/*"
+      },
+      "Artist": {
+        "label": "Artist",
+        "stat": "int",
+        "cost": "3/2"
+      },
+      "Breakfall": {
+        "label": "Breakfall",
+        "stat": "dex",
+        "cost": "3/2"
+      },
+      "Bribery": {
+        "label": "Bribery",
+        "stat": "pre",
+        "cost": "3/2"
+      },
+      "Bureaucratics": {
+        "label": "Bureaucratics",
+        "stat": "pre",
+        "cost": "3/2"
+      },
+      "City Knowledge": {
+        "label": "City Knowledge",
+        "stat": "v",
+        "cost": "2/1/*"
+      },
+      "Climbing": {
+        "label": "Climbing",
+        "stat": "dex",
+        "cost": "3/2"
+      },
+      "Combat Driving": {
+        "label": "Combat Driving",
+        "stat": "dex",
+        "cost": "3/2"
+      },
+      "Combat Pilot": {
+        "label": "Combat Pilot",
+        "stat": "dex",
+        "cost": "3/2"
+      },
+      "Computer Programming": {
+        "label": "Computer Programming",
+        "stat": "int",
+        "cost": "3/2"
+      },
+      "Concealment": {
+        "label": "Concealment",
+        "stat": "int",
+        "cost": "3/2"
+      },
+      "Contortionist": {
+        "label": "Contortionist",
+        "stat": "dex",
+        "cost": "3/2"
+      },
+      "Conversation": {
+        "label": "Conversation",
+        "stat": "pre",
+        "cost": "3/2"
+      },
+      "Cramming": {
+        "label": "Cramming",
+        "stat": "int",
+        "cost": "3/1"
+      },
+      "Criminology": {
+        "label": "Criminology",
+        "stat": "int",
+        "cost": "3/2"
+      },
+      "Cryptography": {
+        "label": "Cryptography",
+        "stat": "int",
+        "cost": "3/2"
+      },
+      "Deduction": {
+        "label": "Deduction",
+        "stat": "int",
+        "cost": "3/2"
+      },
+      "Demolitions": {
+        "label": "Demolitions",
+        "stat": "int",
+        "cost": "3/2"
+      },
+      "Disguise": {
+        "label": "Disguise",
+        "stat": "int",
+        "cost": "3/2"
+      },
+      "Electronics": {
+        "label": "Electronics",
+        "stat": "int",
+        "cost": "3/2"
+      },
+      "Fast Draw": {
+        "label": "Fast Draw",
+        "stat": "dex",
+        "cost": "3/2"
+      },
+      "Forensic Medicine": {
+        "label": "Forensic Medicine",
+        "stat": "int",
+        "cost": "3/1"
+      },
+      "Forgery": {
+        "label": "Forgery",
+        "stat": "int",
+        "cost": "3/2"
+      },
+      "Gambling": {
+        "label": "Gambling",
+        "stat": "int",
+        "cost": "3/2"
+      },
+      "High Society": {
+        "label": "High Society",
+        "stat": "pre",
+        "cost": "3/2"
+      },
+      "Interrogation": {
+        "label": "Interrogation",
+        "stat": "pre",
+        "cost": "3/2"
+      },
+      "Inventor": {
+        "label": "Inventor",
+        "stat": "int",
+        "cost": "3/2"
+      },
+      "Knowledge": {
+        "label": "Knowledge",
+        "stat": "na",
+        "cost": "2/1/*"
+      },
+      "Language": {
+        "label": "Language",
+        "stat": "v",
+        "cost": "Varies"
+      },
+      "Lipreading": {
+        "label": "Lipreading",
+        "stat": "int",
+        "cost": "3/2"
+      },
+      "Lockpicking": {
+        "label": "Lockpicking",
+        "stat": "dex",
+        "cost": "3/2"
+      },
+      "Mechanics": {
+        "label": "Mechanics",
+        "stat": "int",
+        "cost": "3/2"
+      },
+      "Mimicry": {
+        "label": "Mimicry",
+        "stat": "int",
+        "cost": "3/2"
+      },
+      "Navigation": {
+        "label": "Navigation",
+        "stat": "int",
+        "cost": "3/2"
+      },
+      "Oratory": {
+        "label": "Oratory",
+        "stat": "pre",
+        "cost": "3/2"
+      },
+      "First Aid": {
+        "label": "First Aid",
+        "stat": "int",
+        "cost": "3/2"
+      },
+      "Persuasion": {
+        "label": "Persuasion",
+        "stat": "pre",
+        "cost": "3/2"
+      },
+      "Profession": {
+        "label": "Profession",
+        "stat": "na",
+        "cost": "2/1/*"
+      },
+      "Riding": {
+        "label": "Riding",
+        "stat": "dex",
+        "cost": "3/2"
+      },
+      "Science": {
+        "label": "Science",
+        "stat": "na",
+        "cost": "2/1/*"
+      },
+      "Security Systems": {
+        "label": "Security Systems",
+        "stat": "int",
+        "cost": "3/2"
+      },
+      "Seduction": {
+        "label": "Seduction",
+        "stat": "pre",
+        "cost": "3/2"
+      },
+      "Shadowing": {
+        "label": "Shadowing",
+        "stat": "int",
+        "cost": "3/2"
+      },
+      "Showmanship": {
+        "label": "Showmanship",
+        "stat": "pre",
+        "cost": "3/2"
+      },
+      "Sleight of Hand": {
+        "label": "Sleight of Hand",
+        "stat": "dex",
+        "cost": "3/2"
+      },
+      "Stealth": {
+        "label": "Stealth",
+        "stat": "dex",
+        "cost": "3/2"
+      },
+      "Streetwise": {
+        "label": "Streetwise",
+        "stat": "pre",
+        "cost": "3/2"
+      },
+      "Survival": {
+        "label": "Survival",
+        "stat": "int",
+        "cost": "3/2"
+      },
+      "Systems Operation": {
+        "label": "Systems Operation",
+        "stat": "int",
+        "cost": "3/2"
+      },
+      "Tactics": {
+        "label": "Tactics",
+        "stat": "int",
+        "cost": "3/2"
+      },
+      "Teamwork": {
+        "label": "Teamwork",
+        "stat": "dex",
+        "cost": "3/2"
+      },
+      "Tracking": {
+        "label": "Tracking",
+        "stat": "int",
+        "cost": "3/2"
+      },
+      "Trading": {
+        "label": "Trading",
+        "stat": "pre",
+        "cost": "3/2"
+      },
+      "Transport Familiarity": {
+        "label": "Transport Familiarity",
+        "stat": "v",
+        "cost": "Varies"
+      },
+      "Ventriloquism": {
+        "label": "Ventriloquism",
+        "stat": "int",
+        "cost": "3/2"
+      },
+      "Weapon Familiarity": {
+        "label": "Weapon Familiarity",
+        "stat": "v",
+        "cost": "Varies"
+      },
+      "Weaponsmith": {
+        "label": "Weaponsmith",
+        "stat": "int",
+        "cost": "3/2"
+      }
+    },
+    "spells": {},
+    "items": {}
+  },
+  "Item": {
+    "types": [
+      "item"
+    ],
+    "item": {
+      "description": "",
+      "quantity": 1,
+      "weight": 0,
+      "attributes": {},
+      "groups": {}
+    }
   }
-}
 }

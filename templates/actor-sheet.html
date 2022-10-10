@@ -24,7 +24,7 @@
             </div>
         </div>
     </header>
-
+    
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary">
         <a class="item" data-tab="stats">Stats</a>
@@ -34,10 +34,14 @@
         <a class="item" data-tab="combat">Combat</a>
         <a class="item" data-tab="description">Info</a>
     </nav>
-
+    
     {{!-- Sheet Body --}}
     <section class="sheet-body">
-
+        {{!-- Attributes Tab --}}
+        <div class="tab attributes" data-group="primary" data-tab="attributes">
+          
+        </div>
+        
         {{!-- Biography Tab --}}
         <div class="tab description" data-group="primary" data-tab="description">
             {{editor biographyHTML target="system.biography" button=true editable=editable engine="prosemirror"}}
@@ -96,9 +100,5 @@
             </p>
         </div>
 
-        {{!-- Attributes Tab --}}
-        <div class="tab attributes" data-group="primary" data-tab="attributes">
-          
-        </div>
     </section>
 </form>
