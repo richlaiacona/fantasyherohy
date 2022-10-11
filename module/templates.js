@@ -9,6 +9,7 @@ export const preloadHandlebarsTemplates = async function() {
   const templatePaths = [
     // Attribute list partial.
     "systems/fantasyherohy/templates/parts/sheet-attributes.html",
+    "systems/fantasyherohy/templates/parts/sheet-skills.html",
     "systems/fantasyherohy/templates/parts/sheet-groups.html"
   ];
 

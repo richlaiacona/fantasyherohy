@@ -7,16 +7,23 @@
             <h1 class="charname">
                 <input name="name" type="text" value="{{data.name}}" placeholder="Name" />
             </h1>
-            <div class="resource">BODY
-                <input type="number" name="system.attributes.bdy.value" value="{{systemData.attributes.bdy.value}}"/>
+        <div class="resource-row">
+            <div class="record">BODY
+                <input type="number" name="system.attributes.bdy.value" value="{{systemData.attributes.bdy.value}}"/> 
                 <span> / </span>
-                <input type="number" name="system.attributes.bdy.max" value="{{systemData.attributes.bdy.max}}"/>
+                <input type="number" name="system.power.max" value="{{systemData.attributes.bdy.max}}"/>
             </div>
-            <div class="resource">
-                <input type="number" name="system.power.value" value="{{systemData.power.value}}"/>
+            <div class="record">STUN
+                <input type="number" name="system.power.value" value="{{systemData.attributes.stn.value}}"/>
                 <span> / </span>
-                <input type="number" name="system.power.max" value="{{systemData.power.max}}"/>
+                <input type="number" name="system.power.max" value="{{systemData.attributes.stn.max}}"/>
+            </div> 
+            <div class="record">END
+                <input type="number" name="system.power.value" value="{{systemData.attributes.end.value}}"/>
+                <span> / </span>
+                <input type="number" name="system.power.max" value="{{systemData.attributes.end.max}}"/>
             </div>
+        </div>
         </div>
     </header>
 
@@ -92,12 +99,15 @@
 
         {{!-- Attributes Tab --}}
         <div class="tab attributes" data-group="primary" data-tab="attributes">
-             
-
             {{!-- Render the attribute list partial. --}}
             {{> "systems/fantasyherohy/templates/parts/sheet-attributes.html" attributes=systemData.ungroupedAttributes dtypes=dtypes}}
-
-            
         </div>
+
+        {{!-- Skills Tab --}}
+        <div class="tab skills" data-group="primary" data-tab="skills">
+            {{!-- Render the skills list partial. --}}
+            {{> "systems/fantasyherohy/templates/parts/sheet-skills.html" skills=systemData.ungroupedSkills dtypes=dtypes}}
+        </div>
+
     </section>
 </form>

@@ -13,9 +13,9 @@ export class SimpleActorSheet extends ActorSheet {
       classes: ["fantasyherohy", "sheet", "actor"],
       template: "systems/fantasyherohy/templates/actor-sheet.html",
       width: 600,
-      height: 600,
+      height: 900,
       tabs: [{navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description"}],
-      scrollY: [".biography", ".items", ".attributes"],
+      scrollY: [".biography", ".items", ".attributes", ".skills"],
       dragDrop: [{dragSelector: ".item-list .item", dropSelector: null}]
     });
   }

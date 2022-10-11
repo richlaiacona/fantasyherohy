@@ -7,6 +7,7 @@
                 <td  class="attribute-label" >MAX</td>
                 <td  class="attribute-label" >COST</td>
                 <td  class="attribute-label" >BASE</td>
+                <td  class="attribute-label" >POINTS</td>
             </tr>
 
             {{#each systemData.attributes as |attrib key|}}
@@ -19,6 +20,9 @@
                 <td class="attribute-label" name="data.attributes.{{key}}.label">{{max}}</td>
                 <td class="attribute-label" name="data.attributes.{{key}}.label">{{cost}}</td>
                 <td class="attribute-label" name="data.attributes.{{key}}.label">{{base}}</td>
+                <td class="attribute-editbox">
+                    <input class="attribute-value" type="text" name="data.attributes.{{key}}.value" value="{{attrib.pts}}" data-dtype="Number"/>
+                </td>
             </tr>
 
             {{/each}}

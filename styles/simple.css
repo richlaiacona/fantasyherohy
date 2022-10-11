@@ -250,4 +250,16 @@ input.attribute-value {
   text-align: center;
   text-transform: uppercase;
   background-color: antiquewhite;
+  height: 100%;
+  border: 1pt solid #111;
+}
+.record {
+  width: 150px;
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  margin: 5px;
+}
+.resource-row {
+  display: inline-flex;
 }

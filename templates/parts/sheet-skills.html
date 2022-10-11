@@ -1,0 +1,32 @@
+<section class="skills-group">
+    <div>
+        <table class="skills-table">
+            <tr class="skill">
+                <td  class="skill-label" >STAT</td>
+                <td  class="skill-label" >VAL</td>
+                <td  class="skill-label" >MAX</td>
+                <td  class="skill-label" >COST</td>
+                <td  class="skill-label" >BASE</td>
+                <td  class="skill-label" >POINTS</td>
+            </tr>
+
+            {{#each systemData.skills as |skill key|}}
+
+            <tr class="skill" data-skill="{{key}}">
+                <td class="skill-label" name="data.skills.{{key}}.label">{{label}}</td>
+                <td class="skill-editbox">
+                    <input class="skill-value" type="text" name="data.skills.{{key}}.value" value="{{skill.pts}}" data-dtype="Number"/>
+                </td>
+                <td class="skill-label" name="data.skills.{{key}}.label">{{stat}}</td>
+                <td class="skill-label" name="data.skills.{{key}}.label">{{cost}}</td>
+                <td class="skill-label" name="data.skills.{{key}}.label">{{pts}}</td>
+                <td class="skill-editbox">
+                    <input class="skill-value" type="text" name="data.skills.{{key}}.value" value="{{skill.pts}}" data-dtype="Number"/>
+                </td>
+            </tr>
+
+            {{/each}}
+
+        </table>
+    </div>
+</section>
